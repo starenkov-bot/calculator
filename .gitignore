@@ -1,0 +1,12 @@
+# Виртуальное окружение
+venv/
+env/
+
+# Скомпилированные файлы Pyton
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Файлы ОС
+.DS_Store
+Thumbs.db
