@@ -15,14 +15,14 @@ def get_number(prompt: str) -> float:
 def get_operation() -> str:
     """
     Запрашивает у пользователя математическую операцию.
-    Повторяет запрос, пока не будет введен один из символов: +, -, *, /
+    Повторяет запрос, пока не будет введен один из символов: +, -, *, /, **
     """
-    valid_operations = ['+', '-', '*', '/']
+    valid_operations = ['+', '-', '*', '/', '**']
     while True:
-        op = input("Введите операцию (+, -, *, /): ").strip()
+        op = input("Введите операцию (+, -, *, /, **): ").strip()
         if op in valid_operations:
             return op
-        print("Ошибка: недопустимая операция. Используйте только +, -, *, /.")
+        print("Ошибка: недопустимая операция. Используйте только +, -, *, /, **.")
 
 
 def calculate(num1: float, num2: float, operation: str):
@@ -38,10 +38,10 @@ def calculate(num1: float, num2: float, operation: str):
         return num1 * num2, None
     elif operation == '/':
         if num2 == 0:
-            return None, "Ошибка: деление на ноль невозможно."
+            return None, "Ошибка: делить на ноль нельзя!"
         return num1 / num2, None
-    elif op == '**':
-         print(f"Результат: {a ** b}")
+    elif operation == '**':
+        return num1 ** num2, None
 
 
 def main():
