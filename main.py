@@ -1,4 +1,4 @@
-# Автор: Иванов И.И., группа 4ИСП-1, 14.10.2026
+# Автор: Стареньков А.С., группа ПРЗ-23, 14.10.2026
 def get_number(prompt: str) -> float:
     """
     Запрашивает у пользователя число с проверкой ввода.
@@ -40,6 +40,8 @@ def calculate(num1: float, num2: float, operation: str):
         if num2 == 0:
             return None, "Ошибка: деление на ноль невозможно."
         return num1 / num2, None
+    elif op == '**':
+         print(f"Результат: {a ** b}")
 
 
 def main():
